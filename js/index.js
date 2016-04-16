@@ -67,11 +67,15 @@ function twoRight(event) {
 	$('#two-right span').addClass('display-none');
 	$('#section-three').slideDown();
 		setTimeout(function(){ 
+			$('.footer-color').css('background-color', '#44739d');
 			$('html, body').animate({
 	        scrollTop: $("#section-three").offset().top
-		    }, 2000);
-		    $('.footer-color').css('background-color', '#44739d');
-			}, 3000);
+		    }, 2000)}, 3000);
+		setTimeout(function(){ 
+			$('.sm-height').animate({height: '+=100px'}, 2000);
+			$('.med-height').animate({height: '+=150px'}, 2000);
+			$('.lg-height').animate({height: '+=200px'}, 2000)
+		}, 3500);
 }
 
 $('.sm-height').click(threeWrong);
@@ -90,11 +94,47 @@ function threeRight(event){
 	$('.three-right').fadeIn('slow');
 	$('#section-four').slideDown();
 		setTimeout(function(){ 
+			$('.footer-color').css('background-color', '#3a5f81')
 			$('html, body').animate({
 	        scrollTop: $("#section-four").offset().top
-		    }, 2000);
-		    $('.footer-color').css('background-color', '#3a5f81');
-			}, 4000);
+		    }, 2000)}, 4000);
+		setTimeout(function(){ 
+			$('#four-a').circleProgress({
+			startAngle: -Math.PI / 2,	
+		    value: 0.04,
+		    size: 175,
+		    fill: {color: '#6798c4'},
+		    emptyFill: 'rgba(255, 255, 255, .8)',
+		    thickness: 10
+			})}, 5000)
+			setTimeout(function(){ 
+			$('#four-b').circleProgress({
+			startAngle: -Math.PI / 2,	
+		    value: 0.16,
+		    size: 175,
+		    fill: {color: '#6798c4'},
+		    emptyFill: 'rgba(255, 255, 255, .8)',
+		    thickness: 10
+			})}, 5000);
+			setTimeout(function(){ 
+			$('#four-c').circleProgress({
+			startAngle: -Math.PI / 2,	
+		    value: 0.32,
+		    size: 175,
+		    fill: {color: '#6798c4'},
+		    emptyFill: 'rgba(255, 255, 255, .8)',
+		    thickness: 10
+			})}, 5000);
+			setTimeout(function(){ 
+			$('#four-d').circleProgress({
+			startAngle: -Math.PI / 2,	
+		    value: 0.48,
+		    size: 175,
+		    fill: {color: '#6798c4'},
+		    emptyFill: 'rgba(255, 255, 255, .8)',
+		    thickness: 10
+			})}, 5000);
+
 }	
 
 $('#four-a').click(fourARight);
@@ -106,7 +146,8 @@ function fourARight(event){
 	event.preventDefault();
 	$('.four-wrong').css('display','none');
 	$('.four-right').fadeIn(1000);
-	$('.learn-more, .learn-more-icon').fadeIn(3000);
+	setTimeout(function(){
+	$('.learn-more, .learn-more-icon').fadeIn(1000)}, 4500);
 
 }
 
@@ -132,24 +173,55 @@ $('.learn-more-icon').click(showForm);
 
 function showForm(event) {
 	event.preventDefault();
-	$('#section-five').slideDown("slow", function(){
-    	$('#section-five').slideDown();
-		$('footer').removeClass('footer-color').addClass('footer-background')
+	$('#section-five').slideDown();
+	setTimeout(function(){ 
+		$('footer').removeClass('footer-color').addClass('footer-background');
 		$('html, body').animate({
-        scrollTop: $('#section-five').offset().top}, 1500);
-   			});	 
-	// setTimeout(function(){ 
-	// 	$('html, body').animate({
-	//        scrollTop: $("#section-five").offset().top
-	// 	    }, 2000);
-	// 	$('footer').removeClass('footer-color').addClass('footer-background');
-	// 		}, 1000);
+	       scrollTop: $("#section-five").offset().top
+		    }, 2000)}, 100);	
+
+			
 }
 
-// TO DO still
-// add event listener and function for 
-// 	section four right answer
-// add section five dropdown and form actions
-// refactor
+
+	$('#registration-form').submit(processForm);
+
+	function processForm(event) {
+		event.preventDefault();
+
+		var name = $('input[name="name"]').val();
+		var email = $('input[name="email"]').val();
+
+		if (name === '') {
+			$('#error-message')
+				.removeClass('display-none')
+				.html('Please enter your name');
+				console.log('blank name')
+				console.log(name)
+		}
+			
+
+		else if (email === '') {
+			$('#error-message')
+				.removeClass('display-none')
+				.html('Please enter your email address');
+				console.log('blank email')
+
+		}		
+
+		else if (email.indexOf("@") === -1) {
+			$('#error-message')
+				.removeClass('display-none')
+				.html('Please provide valid email address');
+				console.log('no @')
+		}
+
+		else {
+			$('#success-message').removeClass('display-none')
+				.html('Thanks for signing up!');
+			$('#error-message').hide();	
+		}
+	}
+
 
 });

@@ -14,7 +14,6 @@
 		<header>
 			<h1>Explore the Ocean</h1>
 			<blockquote>Man carries the weight of gravity on his shoulders. He is bolted to earth. But man has only to sink beneath the surface and he is free.<span>-Jacques Cousteau</span></blockquote>
-
 		</header>
 		<main class="container">
 			<div class="pre-quiz">
@@ -45,7 +44,7 @@
 							<p class="display-none">that's right!<br> in fact, jellyfish have no eyes, ears, nose, brain, or heart!</p>
 						</div>
 						<div class="answer-two" id="two-wrong"><span>false</span>
-							<p class="display-none">almost... one more try</p>
+							<p class="display-none">almost...one more try</p>
 						</div>
 					</div>	
 					<div class="two-side-animation"><img class= "jelly1" src="images/jellyman-animated.gif" />
@@ -72,10 +71,20 @@
 			<div id="section-four" class="section">
 				<h3> What percent of our oceans are protected?		
 				</h3>
-				<img class="percent" id="four-a" src="images/fourpercent.png" />
-				<img class="percent" id="four-b" src="images/sixteenpercent.png" />
-				<img class="percent" id="four-c" src="images/thirtytwopercent.png" />
-				<img class="percent" id="four-d" src="images/fortyeightpercent.png" />
+					<div id="four-options" class="clearfix">
+						<div id="four-a" class="circle clearfix">
+						<span class="circle-a">4%</span>
+						</div>
+						<div id="four-b" class="circle clearfix">
+						<span class="circle-b">16%</span>
+						</div>
+						<div id="four-c" class="circle clearfix">
+						<span class="circle-c">32%</span>
+						</div>
+						<div id="four-d" class="circle clearfix">
+						<span class="circle-c">48%</span>
+						</div>
+					</div>	
 				<p class="four-wrong display-none">not quite that much, try again</p>
 				<p class="four-right display-none">You're right. Unfortunately, less than 4% of our Oceans are protected - compared to about 16% of our land area. Remember - oceans account for 70% of our earth's surface as well. Pollution and overfishing are a major threat to this enviroment without more protection.</p>
 				<p class="learn-more display-none">Want to learn more and find out how to help?</p>
@@ -83,15 +92,25 @@
 				</p>
 			</div>
 			<div id="section-five" class="section">
-				<h3>Sign up for our newsletter for more info	
+				<h3>Sign up for our newsletter for more info
 				</h3>
-				<!-- insert info about what you can do - sign up form here --> 
-				<!-- update footer with sandy bottom image -->
+				<div id="error-message" class="display-none"></div>
+				<form novalidate id="registration-form">
+				<label for="name">Name</label>
+				<input type="text" name="name" placeholder="Name" id="name">
+				<label for="email">Email</label>
+				<input type="email" name="email" placeholder="Email">
+				<input type="submit" value="Sign up">
+				</form>
+				<div id="success-message" class="display-none"></div>
 			</div>
 		</main>
 		<footer class="clear footer-color">
 		</footer>
 		<script src="http://code.jquery.com/jquery-2.2.2.min.js"></script>	
-		<script type="text/javascript" src="js/index.js"></script>	
+		<script type="text/javascript" src="js/index.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/circle-progress.js"></script>
+
 	</body>
 </html>

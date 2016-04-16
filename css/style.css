@@ -47,7 +47,7 @@ h1 {
 	color: #ffffff;
 	font-size: 52px;
 	line-height: 1.4;
-	padding: 100px 20px 0px;
+	padding: 60px 20px 0px;
 	text-shadow: 2px 2px #666000;
 }
 
@@ -59,7 +59,7 @@ blockquote {
 	font-size: 26px;
 	padding: 0 10px 40px;
 	font-style: italic;
-	width: 50%;
+	width: 60%;
 	margin: 0 auto;
 	line-height: 1.4;
 	padding-top: 30px;
@@ -200,11 +200,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a5f81', end
 
 
 .one-a, .one-b, .one-c, .one-d {
-	color: navy;
+	color: #334352;
 	text-decoration: none;
 	width: 15%;
 	background-color: rgba(255, 255, 255, 0.8);
-	color: navy;
 	margin: 10px;
 	padding: 20px;
 	font-family: arial;
@@ -286,15 +285,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a5f81', end
 }
 
 .sm-height {
-	height: 100px;
+	height: 0px;
 }
 
 .med-height {
-	height: 150px;
+	height: 0px;
 }
 
 .lg-height {
-	height: 200px;
+	height: 0px;
 }
 
 .sm-height:hover, .med-height:hover, .lg-height:hover {
@@ -306,20 +305,41 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a5f81', end
 	line-height: 1.4;
 }
 
-.percent {
-	width: 150px;
-	height: 163px;
-	cursor: pointer;
-	padding: 0 20px;
+#four-options {
+	width: 100%;
+	margin: 0 auto;
 }
+
+.circle {
+	width: 175px;
+    margin: 6px 20px 20px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.circle span {
+    position: absolute;
+    top: 70px;
+    left: 5px;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 36px;
+    color: white;
+    font-family: 'Dosis', arial, sans-serif;
+}    
 
 .four-wrong, .four-right {
-	padding: 20px 0 30px;
+	padding: 20px 0 20px;
 	line-height: 1.4;
+	width: 70%;
+	margin: 0 auto;
 }
 
+
 .learn-more {
-	padding-bottom: 20px;
+	padding-bottom: 30px;
 }
 
 .footer-color {
@@ -336,9 +356,46 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a5f81', end
   height: 156px;
 }
 
+input {
+	display: block;
+	font-size: 16px;
+	padding: 5px;
+	border-radius: 4px;
+	width: 225px;
+	margin: 10px auto;
+	background-color: transparent;
+	border: 3px solid white;
+	border-radius: 4px;
+	color: white;
 
-/*TO DO STILL*/
-/*adjust some responsive items
-adjust font styles and sizes*/
-/*refactor*/
+}
+
+label {
+	display: block;
+}
+
+label[for="email"] {
+	margin-top: 20px;
+}
+
+form {
+	padding: 30px 10px;
+}
+
+input[type="submit"] {
+	color: white;
+	background-color: transparent;
+	margin: 30px auto 20px;
+	width: 235px;
+	padding: 15px 0;
+	border: 3px solid white;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	box-shadow: 0px 2px 5px white;
+}
+  
+
 
