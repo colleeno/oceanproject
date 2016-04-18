@@ -21,6 +21,10 @@ box model fix
 
 /*layout*/
 
+html {
+	font-size: 22px;
+}
+
 body {
 	min-width: 100%;
 }
@@ -39,16 +43,17 @@ header {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  background-size: cover;
 }
 
 h1 {
 	text-align: center;
 	font-family: 'Candal', arial, sans-serif;
 	color: #ffffff;
-	font-size: 52px;
+	font-size: 2.36rem;
 	line-height: 1.4;
 	padding: 60px 20px 0px;
-	text-shadow: 2px 2px #666000;
+	text-shadow: 2px 2px #334352;
 }
 
 blockquote {
@@ -56,27 +61,27 @@ blockquote {
 	font-family: 'Dosis', arial, sans-serif;
 	color: rgba(255, 255, 255, 0.9);
 	font-weight: 400;
-	font-size: 26px;
+	font-size: 1.18rem;
 	padding: 0 10px 40px;
 	font-style: italic;
 	width: 60%;
 	margin: 0 auto;
 	line-height: 1.4;
 	padding-top: 30px;
-	text-shadow: 1px 2px #000000;
+	text-shadow: 5px 2px 3px #334352;
 }
 
 blockquote span {
 	display: block;
 	font-style: normal;
-	font-size: 22px;
+	font-size: 1rem;
 }
 
 h3 {
 	text-align: center;
 	font-family: 'Dosis', arial, sans-serif;
 	font-weight: 400;
-	font-size: 24px;
+	font-size: 1.09rem;
 	padding: 70px 10px 50px;
 	color: white;
 }
@@ -85,7 +90,7 @@ h4 {
 	padding: 50px 10px 50px;
 	font-family: 'Dosis', arial, sans-serif;
 	font-weight: 300;
-	font-size: 22px;
+	font-size: 1rem;
 }
 
 .pre-quiz {
@@ -98,12 +103,12 @@ h4 {
 h5 {
 	padding: 20px 0 70px;
 	font-family: 'Dosis', arial, sans-serif;
-	font-size: 26px;
+	font-size: 1.18rem;
 	color: rgba(255, 255, 255, 0.8);
 }
 
 #start-quiz, .learn-more-icon {
-	font-size: 20px;
+	font-size: 0.9rem;
 	color: rgba(255, 255, 255, 0.6);
 	border: 2px solid rgba(255, 255, 255, 0.6);
 	border-radius: 100px;
@@ -126,7 +131,7 @@ h5 {
 	text-align: center;
 	font-family: 'Dosis';
 	font-weight: 300;
-	font-size: 22px;
+	font-size: 1rem;
 	color: #ffffff;
 	min-height: 250px;
 }
@@ -274,7 +279,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a5f81', end
 .three-a, .three-b, .three-c {
 	width: 33.33%;
 	float: left;
-	font-size: 20px;
+	font-size: 0.9rem;
 }
 
 .sm-height, .med-height, .lg-height {
@@ -325,7 +330,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a5f81', end
     width: 100%;
     text-align: center;
     line-height: 40px;
-    font-size: 36px;
+    font-size: 1.64rem;
     color: white;
     font-family: 'Dosis', arial, sans-serif;
 }    
@@ -358,7 +363,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a5f81', end
 
 input {
 	display: block;
-	font-size: 16px;
+	font-size: 0.73rem;
 	padding: 5px;
 	border-radius: 4px;
 	width: 225px;
@@ -397,5 +402,74 @@ input[type="submit"]:hover {
 	box-shadow: 0px 2px 5px white;
 }
   
+@media screen and (max-width: 992px){
+	html {
+		font-size: 20px;
+	}
 
+@media screen and (max-width: 768px){
+	html {
+		font-size: 16px;
+	}	
+
+	h1 {
+		padding: 30px 10px 0px;
+	}
+
+	.pre-quiz {
+		padding: 15px 0 0;
+	}
+
+	h3 {
+		padding: 30px 10px;
+	}
+		
+	h5 {
+		padding: 20px 0 30px;
+	}
+
+	.two-wrapper {
+		width: 85%;
+	}
+
+	.two-side-animation {
+		width: 15%;
+	}
+
+	.answer-two {
+		width: 70%;
+	}
+
+	.jelly1 {
+		width: 75px;
+		height: 88px;
+	}
+
+	.jelly2 {
+		width: 85px;
+		height: 99px;	
+	}
+
+	.circle {
+		float: left;
+		width: 100px;
+		display: block;
+	}
+
+	.circle span {
+    	top: 30px;	
+	}
+
+	.four-wrong, .four-right {
+		width: 90%;
+	}
+
+	#answer-two {
+		padding: 5px 0
+	}
+
+	#two-right p {
+		padding: 0;
+		line-height: 1.4;
+}
 

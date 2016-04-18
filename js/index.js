@@ -98,7 +98,50 @@ function threeRight(event){
 			$('html, body').animate({
 	        scrollTop: $("#section-four").offset().top
 		    }, 2000)}, 4000);
-		setTimeout(function(){ 
+		
+
+			if (document.body.clientWidth <= 768) {
+			setTimeout(function(){ 	
+			$('#four-a').circleProgress({
+			startAngle: -Math.PI / 2,	
+		    value: 0.04,
+		    size: 100,
+		    fill: {color: '#6798c4'},
+		    emptyFill: 'rgba(255, 255, 255, .8)',
+		    thickness: 10
+			})}, 5000)
+			setTimeout(function(){ 
+			$('#four-b').circleProgress({
+			startAngle: -Math.PI / 2,	
+		    value: 0.16,
+		    size: 100,
+		    fill: {color: '#6798c4'},
+		    emptyFill: 'rgba(255, 255, 255, .8)',
+		    thickness: 10
+			})}, 5000);
+			setTimeout(function(){ 
+			$('#four-c').circleProgress({
+			startAngle: -Math.PI / 2,	
+		    value: 0.32,
+		    size: 100,
+		    fill: {color: '#6798c4'},
+		    emptyFill: 'rgba(255, 255, 255, .8)',
+		    thickness: 10
+			})}, 5000);
+			setTimeout(function(){ 
+			$('#four-d').circleProgress({
+			startAngle: -Math.PI / 2,	
+		    value: 0.48,
+		    size: 100,
+		    fill: {color: '#6798c4'},
+		    emptyFill: 'rgba(255, 255, 255, .8)',
+		    thickness: 10
+			})}, 5000);	
+
+}
+
+			else {
+			setTimeout(function(){ 
 			$('#four-a').circleProgress({
 			startAngle: -Math.PI / 2,	
 		    value: 0.04,
@@ -134,6 +177,7 @@ function threeRight(event){
 		    emptyFill: 'rgba(255, 255, 255, .8)',
 		    thickness: 10
 			})}, 5000);
+		}
 
 }	
 
