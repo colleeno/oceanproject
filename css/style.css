@@ -43,8 +43,9 @@ header {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-}
+	background-size: cover;
+	background-attachment: fixed;
+	}
 
 h1 {
 	text-align: center;
@@ -68,7 +69,7 @@ blockquote {
 	margin: 0 auto;
 	line-height: 1.4;
 	padding-top: 30px;
-	text-shadow: 5px 2px 3px #334352;
+	text-shadow: 2px 2px 2px #334352;
 }
 
 blockquote span {
